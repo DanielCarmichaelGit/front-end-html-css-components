@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    background-color: white;
+    color: #333;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    height: 8rem;
+    width: 100vw;
+    background-color: white;
+    border-bottom: 2px solid #F37748;
+    text-align: center;
+    justify-content: center;
+}
+
+main {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    height: 5rem;
+    width: 100vw;
+    margin-top: 2rem;
+    background-color: #F37748;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 15rem;
+    height: 30rem;
+    border: 3px solid #F37748;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+label {
+    margin: 3px 0;
+    font-size: small;
+    color: #777;
+}
+
+p {
+    margin-left: 5px;
+}
+
+span {
+    color: #F37748;
+}
+
+.button-container {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: 40rem;
+    border: 3px solid #F37748;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin: 0 1rem;
+    height: 3rem;
+    width: 10rem;
+    padding: auto;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #111;
+    border-radius: 0.3rem;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: 70rem;
+    border: 3px solid #F37748;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 2rem;
+}
+
+.hidden-text{
+    display: none;
+}
+
+.remember-me-button {
+    display: flex;
+    margin: 0 2rem;
+    align-items: center;
+    color: #777;
+    font-size: small;
+}
+
+.form-links {
+    margin-top: 5rem;
+}
+
+.form-links a {
+    font-size: small;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #F37748;
+}
+
+#checkbox-text {
+    margin-left: 5px;
+    color:#777;
+}
+
+#hidden-checkbox-text {
+    display: none;
+}
+
+#simple-button {
+    color: #222;
+}
+
+#grow-button:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+#shrink-button:hover {
+    transform: scale(0.95);
+    transition: 0.2s;
+}
+
+#x-expand-button:hover {
+    text-align: center;
+    transform: scaleX(1.1);
+    transition: 0.2s;
+}
+
+#y-expand-button:hover {
+    transform: scaleY(1.1);
+    transition: 0.2s;
+}
+
+#x-shift-button:hover {
+    transform: translateX(4px);
+    transition: 0.2s;
+}
+
+#y-shift-button:hover {
+    transform: translateY(4px);
+    transition: 0.2s;
+}
+
+#to-rounded-button:hover {
+    border-radius: 1.5rem;
+}
+
+#rounded-button {
+    border-radius: 1.5rem;
+}
+
+#to-squared-button {
+    border-radius: 1.5rem;
+}
+
+#to-squared-button:hover {
+    border-radius: 0.3rem;
+}
+
+#tilt-button:hover {
+    transform: rotate(2deg);
+    transition: 0.2s;
+}
+
+#wiggle-button:hover{ 
+    animation: shake 0.2s infinite;
+    animation-timing-function: linear;   
+  }
+  
+@keyframes shake {
+0% { transform: rotate(0.5deg); }
+50% { transform: rotate(-0.5deg); }
+100% { transform: rotate(0.5deg); }
+}
+
+#pulse-button:hover{ 
+animation: pulse 1s infinite;
+animation-timing-function: linear;   
+}
+  
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05)};
+100% { transform: scale(1); }
+}
+
+#gradient-button {
+    background: linear-gradient(45deg, pink, skyblue);
+    border: none;
+    color: white;
+}
+
+#gradient-border-button {
+    border-radius: 0.3rem;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, red, purple) 1;
+}
+
+#gradient-text-button {
+	background: -webkit-linear-gradient(45deg, red, purple);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#gradient-content-button {
+    border-radius: 0.3rem;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, red, purple) 1;
+    background: -webkit-linear-gradient(45deg, red, purple);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#animated-border-button {
+    --angle: 0deg;
+    border: 3px solid;
+    border-image: linear-gradient(var(--angle), red, purple) 1;
+    animation: 10s rotate linear infinite;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+#download-button:hover .hidden-text{
+    display: inline;
+}
+
+#pay-now-button:hover .hidden-text{
+    display: inline;
+}
+
+#simple-radio {
+    outline: 0;
+    border: 2px solid #F37748;
+}
+
+#simple-form-button {
+    width: 10rem;
+    height: 2rem;
+    color: #F37748;
+    border: none;
+    background-color: white;
+    align-self: center;
+    cursor: pointer;
+}
